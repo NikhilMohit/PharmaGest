@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="762.0" prefWidth="1435.0" styleClass="body" stylesheets="@Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.CaisseApplicationController">
+   <children>
+      <AnchorPane layoutX="86.0" layoutY="111.0" prefHeight="626.0" prefWidth="1318.0" styleClass="container" stylesheets="@Dashboard.css">
+         <children>
+            <TableView fx:id="caisseTable" layoutX="24.0" layoutY="103.0" prefHeight="182.0" prefWidth="651.0" style="-fx-border-radius: 15px;">
+               <columns>
+                  <TableColumn fx:id="IdReceiptColumn" prefWidth="240.80001068115234" text="IdReceipt" />
+                  <TableColumn fx:id="VendeurColumn" prefWidth="228.00003051757812" text="Vendeur" />
+                  <TableColumn fx:id="TotalColumn" prefWidth="176.0" text="Total" />
+               </columns>
+            </TableView>
+            <Button fx:id="PayerButton" layoutX="859.0" layoutY="446.0" mnemonicParsing="false" onAction="#handlePayerButtonAction" prefHeight="47.0" prefWidth="267.0" styleClass="mybutton" text="Payer">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <TextField fx:id="searchTextField" layoutX="119.0" layoutY="41.0" prefHeight="26.0" prefWidth="192.0" />
+            <Label layoutX="24.0" layoutY="41.0" text="Rechercher:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="montanttotal" layoutX="836.0" layoutY="159.0" prefHeight="34.0" prefWidth="331.0" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="836.0" layoutY="233.0" prefHeight="34.0" prefWidth="331.0" text="Montant Payer:" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="montantpayer" layoutX="836.0" layoutY="296.0" prefHeight="34.0" prefWidth="331.0" />
+            <Label layoutX="836.0" layoutY="103.0" prefHeight="34.0" prefWidth="331.0" text="Montant Payer:" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="caisseidmedicament3" layoutX="186.0" layoutY="371.0" prefHeight="242.0" prefWidth="158.0" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="caisseidmedicament2" layoutX="431.0" layoutY="367.0" prefHeight="242.0" prefWidth="158.0" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="caisseitemTable" layoutX="25.0" layoutY="370.0" prefHeight="200.0" prefWidth="651.0">
+              <columns>
+                <TableColumn fx:id="idmedicamentColumn" prefWidth="99.20001220703125" text="idmedicament" />
+                 <TableColumn fx:id="nomColumn" prefWidth="228.79998779296875" text="Nom medicament" />
+                 <TableColumn fx:id="prixColumn" prefWidth="100.00006103515625" text="Prix" />
+                 <TableColumn fx:id="quantiteColumn" prefWidth="92.79998779296875" text="Quantite" />
+                 <TableColumn fx:id="totalColumn" prefWidth="124.0" text="Total" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

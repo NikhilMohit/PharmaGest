@@ -1,0 +1,81 @@
+package com.example.demo2;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+//Main class which extends from Application Class
+public class MedicamentMaintenance extends Application {
+
+    //This is our PrimaryStage (It contains everything)
+    private Stage primaryStage;
+
+    //This is the BorderPane of RootLayout
+    private BorderPane rootLayout;
+
+    @Override
+    public void start(Stage primaryStage) {
+        //1) Declare a primary stage (Everything will be on this stage)
+        this.primaryStage = primaryStage;
+
+        //Optional: Set a title for primary stage
+        this.primaryStage.setTitle("SW Test Academy - Sample JavaFX App");
+
+        //2) Initialize RootLayout
+        initRootLayout();
+
+        //3) Display the EmployeeOperations View
+        showEmployeeView();
+    }
+
+    //Initializes the root layout.
+    //Initializes the root layout.
+    public void initRootLayout() {
+        try {
+            //First, load root layout from RootLayout.fxml
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MedicamentMaintenance.class.getResource("RootLayout.fxml"));
+            rootLayout = (BorderPane) loader.load();
+
+            // Set the desired width and height for the root layout
+            rootLayout.setPrefWidth(1435);
+            rootLayout.setPrefHeight(790);
+
+            //Second, show the scene containing the root layout.
+            Scene scene = new Scene(rootLayout, 1435, 762); //We are sending rootLayout to the Scene.
+            primaryStage.setScene(scene); //Set the scene in primary stage.
+
+        /*//Give the controller access to the main.
+        RootLayoutController controller = loader.getController();
+        controller.setMain(this);*/
+
+            //Third, show the primary stage
+            primaryStage.show(); //Display the primary stage
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    //Shows the employee operations view inside the root layout.
+    public void showEmployeeView() {
+        try {
+            //First, load EmployeeView from EmployeeView.fxml
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(MedicamentMaintenance.class.getResource("MedicamentMaintenance.fxml"));
+            AnchorPane employeeOperationsView = (AnchorPane) loader.load();
+
+            // Set Employee Operations view into the center of root layout.
+            rootLayout.setCenter(employeeOperationsView);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+}

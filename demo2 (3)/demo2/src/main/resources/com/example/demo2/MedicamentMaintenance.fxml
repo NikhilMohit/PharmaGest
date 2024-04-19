@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="1435.0" styleClass="body" stylesheets="@Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.MedicamentMaintenanceController">
+    <children>
+        <TextField fx:id="medicamentIdText" layoutX="399.0" layoutY="69.0" prefHeight="19.0" prefWidth="100.0" promptText="ID Medicament" />
+        <Label layoutX="289.0" layoutY="73.0" prefHeight="18.0" prefWidth="79.0" text="ID Medicament" textFill="WHITE" />
+        <TextArea fx:id="resultArea" editable="false" layoutX="13.0" layoutY="621.0" prefHeight="126.0" prefWidth="225.0" styleClass="white-textfield" wrapText="true" />
+        <Label layoutX="6.0" layoutY="571.0" prefHeight="70.0" prefWidth="70.0" text="Résultat" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font></Label>
+        <TextField fx:id="newmedicamentText" layoutX="785.0" layoutY="69.0" prefHeight="26.0" prefWidth="162.0" />
+        <ChoiceBox fx:id="updateMedicamentFieldChoiceBox" layoutX="587.0" layoutY="69.0" prefHeight="26.0" prefWidth="162.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Nouveau Nom" />
+                    <String fx:value="Nouveau Fournisseur" />
+                    <String fx:value="Nouvelle Famille" />
+                    <String fx:value="Nouvelle Forme" />
+                    <String fx:value="Nouvelle quantitemincomm" />
+                    <String fx:value="Nouvelle quantitemaxstock" />
+                    <String fx:value="Nouvelle quantiteenstock" />
+                    <String fx:value="Nouvelle Ordonnance" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <VBox layoutX="153.0" layoutY="55.0" spacing="4.0" />
+        <Separator layoutX="248.0" layoutY="44.0" prefHeight="26.0" prefWidth="405.0" />
+        <Separator layoutX="218.0" layoutY="4.0" orientation="VERTICAL" prefHeight="344.0" prefWidth="59.0" />
+        <TableView fx:id="medicamentTable" editable="true" layoutX="258.0" layoutY="174.0" prefHeight="579.0" prefWidth="1175.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="medicamentIdColumn" prefWidth="56.0" text="Id" />
+                <TableColumn fx:id="NomMedicamentColumn" prefWidth="123.199951171875" text="Nom" />
+                <TableColumn fx:id="FournisseurMedicamentColumn" prefWidth="186.4000244140625" text="Fournisseur" />
+                <TableColumn fx:id="FamilleMedicamentColumn" prefWidth="147.199951171875" text="Famille" />
+                <TableColumn fx:id="FormeMedicamentColumn" prefWidth="120.79998779296875" text="Forme" />
+                <TableColumn fx:id="QuantiteMinCommandeMedicamentColumn" prefWidth="172.0" text="Quantitemincommande" />
+                <TableColumn fx:id="QuantiteMaxStockMedicamentColumn" prefWidth="112.800048828125" text="Quantitemaxstock" />
+                <TableColumn fx:id="QuantiteEnStockMedicamentColumn" prefWidth="133.5999755859375" text="Quantiteenstock" />
+                <TableColumn fx:id="OrdonnanceMedicamentColumn" prefWidth="108.0" text="Ordonnance" />
+            </columns>
+        </TableView>
+        <Label layoutX="7.0" layoutY="29.0" prefHeight="18.0" prefWidth="100.0" text="Nom Medicament" textFill="WHITE" />
+        <Button fx:id="addMedicamentBtn" layoutX="49.0" layoutY="558.0" mnemonicParsing="false" onAction="#insertMedicament" prefHeight="19.0" prefWidth="142.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Ajouter Medicament" />
+        <Button fx:id="searchMedicamentBtn" layoutX="809.0" layoutY="132.0" mnemonicParsing="false" onAction="#searchMedicaments" prefHeight="30.0" prefWidth="142.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Chercher les Medicaments">
+            <font>
+                <Font size="11.0" />
+            </font></Button>
+        <Button fx:id="deleteMedicamentBtn" layoutX="641.0" layoutY="131.0" mnemonicParsing="false" onAction="#supprimerMedicament" prefHeight="32.0" prefWidth="132.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Supprimer" />
+        <Button fx:id="updateMedicamentBtn" layoutX="468.0" layoutY="131.0" mnemonicParsing="false" onAction="#updateMedicamentField" prefHeight="32.0" prefWidth="132.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Mise a jour" />
+        <Button fx:id="searchMedicamentsBtn" layoutX="299.0" layoutY="131.0" mnemonicParsing="false" onAction="#searchMedicament" prefHeight="32.0" prefWidth="132.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Rechercher" />
+        <TextField fx:id="newnommedicamentText" layoutX="74.0" layoutY="56.0" prefHeight="26.0" prefWidth="162.0" promptText="Nom" />
+        <TextField fx:id="newfournisseurmedicamentText" layoutX="74.0" layoutY="122.0" prefHeight="26.0" prefWidth="162.0" promptText="Adresse" />
+        <TextField fx:id="newfamillemedicamentText" layoutX="74.0" layoutY="185.0" prefHeight="26.0" prefWidth="162.0" promptText="Contact" />
+        <TextField fx:id="newformemedicamentText" layoutX="74.0" layoutY="249.0" prefHeight="26.0" prefWidth="162.0" promptText="Mail" />
+        <Label layoutX="8.0" layoutY="91.0" prefHeight="32.0" prefWidth="117.0" text="Fournisseur" textFill="WHITE" />
+        <Label layoutX="8.0" layoutY="160.0" text="Famille" textFill="WHITE" />
+        <Label layoutX="9.0" layoutY="223.0" prefHeight="18.0" prefWidth="90.0" text="Forme" textFill="WHITE" />
+        <Label layoutX="260.0" layoutY="12.0" text="Maintenance Medicament" textFill="WHITE">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+      <Label layoutX="5.0" layoutY="293.0" prefHeight="18.0" prefWidth="100.0" text="Quantité Min Commande" textFill="WHITE" />
+      <TextField fx:id="newquantitemincommandemedicamentText" layoutX="72.0" layoutY="320.0" prefHeight="26.0" prefWidth="162.0" promptText="Nom" />
+      <TextField fx:id="newquantitemaxstockmedicamentText" layoutX="72.0" layoutY="386.0" prefHeight="26.0" prefWidth="162.0" promptText="Adresse" />
+      <TextField fx:id="newquantiteenstockmedicamentText" layoutX="72.0" layoutY="449.0" prefHeight="26.0" prefWidth="162.0" promptText="Contact" />
+      <Label layoutX="6.0" layoutY="355.0" prefHeight="32.0" prefWidth="117.0" text="Quantité Max Stock" textFill="WHITE" />
+      <Label layoutX="6.0" layoutY="424.0" text="Quantité Stock" textFill="WHITE" />
+      <Label layoutX="7.0" layoutY="487.0" prefHeight="18.0" prefWidth="90.0" text="Ordonnance" textFill="WHITE" />
+        <ChoiceBox fx:id="newordonnancemedicamentText" layoutX="72.0" layoutY="516.0" prefHeight="26.0" prefWidth="162.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="True" />
+                    <String fx:value="False" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+    </children>
+</AnchorPane>

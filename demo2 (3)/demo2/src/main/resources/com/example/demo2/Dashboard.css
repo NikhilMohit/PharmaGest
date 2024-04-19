@@ -1,0 +1,37 @@
+/* Define a linear gradient for the body */
+.body {
+    -fx-background-color: linear-gradient(to bottom, #012317, #01a46f);
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* Style for your button */
+.mybutton {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-border-radius: 7px;
+    -fx-border-color: white;
+    -fx-border-width: 3px;
+}
+
+.mybutton1 {
+    -fx-background-color: white;
+    -fx-text-fill: #01a36f;
+    -fx-border-radius: 7px;
+    -fx-border-color: white;
+    -fx-border-width: 3px;
+}
+
+.container {
+    -fx-text-fill: white;
+    -fx-border-radius: 7px;
+    -fx-border-color: white;
+    -fx-border-width: 3px;
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,.5), 6,0,0,0);
+}
+
+.input {
+    -fx-text-fill: white;
+}
+

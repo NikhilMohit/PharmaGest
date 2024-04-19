@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="558.0" prefWidth="1400.0" styleClass="body" stylesheets="@Dashboard.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo2.DashboardController">
+   <children>
+      <Button fx:id="Maintenance" layoutX="125.0" layoutY="307.0" mnemonicParsing="false" onAction="#openMaintenanceScene" prefHeight="95.0" prefWidth="323.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Maintenance">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+      <Button fx:id="Vente" layoutX="608.0" layoutY="308.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="323.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Vente">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+      <Button fx:id="ListedesPrix" layoutX="611.0" layoutY="506.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="323.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Liste des Prix">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+      <Button layoutX="129.0" layoutY="505.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="323.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Réception">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+      <Button layoutX="1085.0" layoutY="310.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="323.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Commande">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+      <Button fx:id="Caisse" layoutX="1085.0" layoutY="505.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="323.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Caisse">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Button>
+      <Button fx:id="disconnectButton" layoutX="614.0" layoutY="688.0" mnemonicParsing="false" onAction="#disconnect" prefHeight="95.0" prefWidth="323.0" styleClass="mybutton" stylesheets="@Dashboard.css" text="Se déconnecter">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Button>
+      <Label fx:id="welcomeLabel" layoutX="355.0" layoutY="201.0" prefHeight="99.0" prefWidth="843.0" style="-fx-alignment: center;" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="MaintenanceButton" fitHeight="154.0" fitWidth="241.0" layoutX="662.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@kisspng-pharmacy-symbol-pharmacist-clip-art-animal-world-picture-green-snake-5a8c2d97099fa6.2665978915191361510394.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
